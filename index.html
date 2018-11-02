@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="pt_BR">
+  <head>
+    <meta charset="utf-8"/>
+    <title>AMZN Money</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="author" content="Rodrigo Costa"/>
+    <script src="js/04_Geo.js"></script>
+    <link rel="stylesheet" href="css/index.css"/>		
+  </head>
+  <body>
+    <h2>AMZN Money - Cálculos Financeiros</h2>
+    <p>Escolha um dos cálculos abaixo</p>
+    <hr/>
+    <p>Sistema Price - parcela constante</p>
+    <ul>
+      <li>Valor das Prestações (R)</li>
+      <li>Valor saldo devedor de ordem t (Pt)</li>
+      <li>Valor saldo devedor de ordem t - 1</li>
+      <li>Valor parcela de juros de ordem t</li>
+      <li>Valor da primeira amortização</li>
+      <li>Valor da parcela de amortização em t</li>
+      <li>Valor das amortizações acumuladas até o período t</li>
+      <li>Amortizações acumuladas entre os períodos t e t + k</li>
+      <li>Juros acumulados até um tempo t</li>
+      <li>Juros acumulados entre t e t + k</li>
+    </ul>
+    <p>Sistema SAC - amortização constante</p>
+    <ul>
+      <li>Valor da amortização (A)</li>
+      <li>Valor saldo devedor de ordem t</li>
+      <li>Valor saldo devedor de ordem t - 1</li>
+      <li>Valor parcela de juros de ordem t</li>
+      <li>Valor da prestação de ordem t</li>
+      <li>Soma das amortizações nos períodos t e t + k</li>
+      <li>Soma dos juros acumulados até tempo t</li>
+      <li>Soma dos juros de t e t + k</li>
+      <li>Soma das prestações acumuladas</li>
+      <li>Soma das prestações de t e t + k</li>
+      <li>Descréscimo nas prestações</li>
+    </ul>
+    <button onclick="getLocation()">OK</button>
+    <h2>Localiza��o do usu�rio</h2>
+    <div id="imagem"></div>
+    <form>
+      <fieldset>
+        <legend>Answer the question: Are you viadao?</legend>
+        <input name="fag" type="radio" value="yes" checked> Yes <br/>
+        <input name="fag" type="radio" value="no"> No <br/>
+        <button id="btn_confirm" type="button" onclick="faggot()">Confirm</button>
+      </fieldset>
+    </form>
+  </body>
+</html>
