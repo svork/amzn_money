@@ -5,7 +5,6 @@
     <title>AMZN Money</title>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <meta name="author" content="Rodrigo Costa"/>
-    <script src="js/04_Geo.js"></script>
     <link rel="stylesheet" href="css/index.css"/>		
   </head>
   <body>
@@ -14,7 +13,7 @@
     <hr/>
     <p>Sistema Price - parcela constante</p>
     <ul>
-      <li>Valor das Prestações (R)</li>
+      <a href="html/01_valor_prestacao.html"><li>Valor das Prestações (R)</li></a>
       <li>Valor saldo devedor de ordem t (Pt)</li>
       <li>Valor saldo devedor de ordem t - 1</li>
       <li>Valor parcela de juros de ordem t</li>
@@ -39,16 +38,5 @@
       <li>Soma das prestações de t e t + k</li>
       <li>Descréscimo nas prestações</li>
     </ul>
-    <button onclick="getLocation()">OK</button>
-    <h2>Localiza��o do usu�rio</h2>
-    <div id="imagem"></div>
-    <form>
-      <fieldset>
-        <legend>Answer the question: Are you viadao?</legend>
-        <input name="fag" type="radio" value="yes" checked> Yes <br/>
-        <input name="fag" type="radio" value="no"> No <br/>
-        <button id="btn_confirm" type="button" onclick="faggot()">Confirm</button>
-      </fieldset>
-    </form>
   </body>
 </html>
