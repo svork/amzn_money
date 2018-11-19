@@ -12,6 +12,7 @@ var Pt;
 var Pt1;
 var Jt;
 var A1;
+var At;
 
 // Fórmulas
 function valor_R(){
@@ -22,6 +23,11 @@ function valor_R(){
 function valor_Pt1(t){
   Pt1 = valor_R() * ((( 1 + i ) ** (( n - t ) + 1 )) - 1 ) / (((( 1 + i ) ** (( n - t ) + 1 ) * i )));
   return Pt1;
+}
+
+function valor_A1(){
+  A1 = valor_R() - i * P;
+  return A1;
 }
 
 // Funções
@@ -47,6 +53,11 @@ function p04(){
 }
 
 function p05(){
-  A1 = valor_R() - i * P;
-  document.getElementById("resultado").innerHTML = "O valor da primeira amortização é R$ " + A1.toFixed(2);
+  document.getElementById("resultado").innerHTML = "O valor da primeira amortização é R$ " + valor_A1().toFixed(2);
+}
+
+function p06(){
+  var t = document.getElementById("p06t").value;
+  At = A1 * (( 1 + i ) ** ( t - 1 ));
+  document.getElementById("resultado").innerHTML = "O valor da parcela de amortização ao final da prestação " + t + " é R$ " + At.toFixed(2);
 }
