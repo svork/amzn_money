@@ -15,6 +15,7 @@ var A1;
 var At;
 var Aac;
 var Aactk;
+var Jac;
 
 // Fórmulas
 function valor_R(){
@@ -77,4 +78,10 @@ function p08(){
   var tk = document.getElementById("p08tk").value;
   Aactk = valor_R() * (((( 1 + i ) ** ( n - t )) - 1 ) / ((( 1 + i ) ** ( n - t )) * i ) - ((( 1 + i ) ** ( n - t - k )) - 1 ) / ((( 1 + i ) ** ( n - t - k )) * i ));
   document.getElementById("resultado").innerHTML = "O valor das amortizações acumuladas entre a parcela " + t + " e " + tk + " é R$ " + Aactk.toFixed(2);
+}
+
+function p09(){
+  var t = document.getElementById("p09t").value;
+  Jac = valor_R() * ( t - (((( 1 + i ) ** n ) - 1 ) / ((( 1 + i ) ** n ) * i ) - ((( 1 + i ) ** ( n - t )) - 1 ) / ((( 1 + i ) ** (n - t )) * i )));
+document.getElementById("resultado").innerHTML = "O valor dos juros acumulados até a parcela " + t + " é R$ " + Jac.toFixed(2);
 }
