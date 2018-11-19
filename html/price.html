@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="pt_BR">
+  <head>
+    <meta charset="utf-8"/>
+    <title>AMZN Money</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="author" content="Rodrigo Costa"/>
+    <link rel="stylesheet" href="../css/price.css"/>
+    <script src="../js/price.js"></script>
+  </head>
+  <body>
+    <h2>Sistema Price</h2>
+    <p>Digite as informações e clique no botão desejado</p>
+    <hr/>
+    <form>
+      <p>Valor das Prestações</p>
+      <button id="1" type="button" onclick="p01()">Calcular</button>
+    <form>
+    <hr/>
+    <form>
+      <p>Saldo Devedor</p>
+      <label for="p02t">Número da prestação</label>
+      <input id="p02t" type="number"> <br/>
+      <button id="2" type="button" onclick="p02()">Calcular</button>
+    </form>
+    <hr/>
+    <h3 id="resultado"></h3>
+    <a href="../index.html">Voltar</a>
+  </body>
+</html>
