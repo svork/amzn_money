@@ -14,6 +14,7 @@ var Jt;
 var A1;
 var At;
 var Aac;
+var Aactk;
 
 // Fórmulas
 function valor_R(){
@@ -67,4 +68,13 @@ function p07(){
   var t = document.getElementById("p07t").value;
   Aac = valor_R() * (((( 1 + i ) ** n ) - 1 ) / ((( 1 + i ) ** n ) * i ) - ((( 1 + i ) ** ( n - t )) - 1 ) / ((( 1 + i ) ** (n - t )) * i ));
   document.getElementById("resultado").innerHTML = "O valor das amortizações acumuladas até a parcela " + t + " é R$ " + Aac.toFixed(2);
+}
+
+function p08(){
+  var t = document.getElementById("p08t").value;
+  var k = document.getElementById("p08tk").value - t;
+  // Perfumaria
+  var tk = document.getElementById("p08tk").value;
+  Aactk = valor_R() * (((( 1 + i ) ** ( n - t )) - 1 ) / ((( 1 + i ) ** ( n - t )) * i ) - ((( 1 + i ) ** ( n - t - k )) - 1 ) / ((( 1 + i ) ** ( n - t - k )) * i ));
+  document.getElementById("resultado").innerHTML = "O valor das amortizações acumuladas entre a parcela " + t + " e " + tk + " é R$ " + Aactk.toFixed(2);
 }
