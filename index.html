@@ -9,16 +9,16 @@
     <link rel="stylesheet" href="css/index.css"/>
     <script src="js/index.js"></script>
   </head>
-  <body>
+  <body onload="mostrar_valores()">
     <h2>AMZN Money - Cálculo de Financiamento</h2>
     <p>Insira os dados do seu financiamento</p>
     <hr/>
     <form>
-      <label>Valor do Financiamento R$</label> <br/>
+      <label id="P_label">Valor do Financiamento R$</label> <br/>
       <input id="P" type="number"> <br/>
-      <label>Taxa %</label> <br/>
+      <label id="i_label">Taxa %</label> <br/>
       <input id="i" type="number"> <br/>
-      <label>Número de prestações</label> <br/>
+      <label id="n_label">Número de prestações</label> <br/>
       <input id="n" type="number"> <br/>
       <br/>
       <p>Escolha o sistema do financiamento: <b>Price</b> ou <b>SAC</b></p>

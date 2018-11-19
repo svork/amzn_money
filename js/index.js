@@ -1,6 +1,13 @@
 // Armazenar os valores do financiamento do usuário usando localStorage
 // ============================================================================
 
+function mostrar_valores(){
+  // Mostrar valores
+  document.getElementById("P_label").innerHTML = "Valor do Financiamento R$ " +  localStorage.getItem("P"); 
+  document.getElementById("i_label").innerHTML = "Taxa % " + localStorage.getItem("i"); 
+  document.getElementById("n_label").innerHTML = "Número de prestações " + localStorage.getItem("n"); 
+}
+
 function armazenar_valores(){
   // Guardar dados em variáveis
   P = document.getElementById("P").value;
