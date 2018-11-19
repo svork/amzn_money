@@ -11,6 +11,7 @@ var R;
 var Pt;
 var Pt1;
 var Jt;
+var A1;
 
 // Fórmulas
 function valor_R(){
@@ -43,4 +44,9 @@ function p04(){
   var t = document.getElementById("p04t").value;
   Jt = i * valor_Pt1(t);
   document.getElementById("resultado").innerHTML = "O valor da parcela de juros ao final da prestação " + t + " é R$ " + Jt.toFixed(2);
+}
+
+function p05(){
+  A1 = valor_R() - i * P;
+  document.getElementById("resultado").innerHTML = "O valor da primeira amortização é R$ " + A1.toFixed(2);
 }
