@@ -16,6 +16,7 @@ var At;
 var Aac;
 var Aactk;
 var Jac;
+var Jactk
 
 // Fórmulas
 function valor_R(){
@@ -31,6 +32,11 @@ function valor_Pt1(t){
 function valor_A1(){
   A1 = valor_R() - i * P;
   return A1;
+}
+
+function valor_Aactk(t, k){
+  Aactk = valor_R() * (((( 1 + i ) ** ( n - t )) - 1 ) / ((( 1 + i ) ** ( n - t )) * i ) - ((( 1 + i ) ** ( n - t - k )) - 1 ) / ((( 1 + i ) ** (     n - t - k )) * i ));
+  return Aactk;
 }
 
 // Funções
@@ -76,12 +82,20 @@ function p08(){
   var k = document.getElementById("p08tk").value - t;
   // Perfumaria
   var tk = document.getElementById("p08tk").value;
-  Aactk = valor_R() * (((( 1 + i ) ** ( n - t )) - 1 ) / ((( 1 + i ) ** ( n - t )) * i ) - ((( 1 + i ) ** ( n - t - k )) - 1 ) / ((( 1 + i ) ** ( n - t - k )) * i ));
-  document.getElementById("resultado").innerHTML = "O valor das amortizações acumuladas entre a parcela " + t + " e " + tk + " é R$ " + Aactk.toFixed(2);
+  document.getElementById("resultado").innerHTML = "O valor das amortizações acumuladas entre a parcela " + t + " e " + tk + " é R$ " + valor_Aactk(t, k).toFixed(2);
 }
 
 function p09(){
   var t = document.getElementById("p09t").value;
   Jac = valor_R() * ( t - (((( 1 + i ) ** n ) - 1 ) / ((( 1 + i ) ** n ) * i ) - ((( 1 + i ) ** ( n - t )) - 1 ) / ((( 1 + i ) ** (n - t )) * i )));
 document.getElementById("resultado").innerHTML = "O valor dos juros acumulados até a parcela " + t + " é R$ " + Jac.toFixed(2);
+}
+
+function p10(){
+  var t = document.getElementById("p10t").value;
+  var k = document.getElementById("p10tk").value - t;
+  // Perfumaria
+  var tk = document.getElementById("p10tk").value;
+  Jactk = valor_R() * k - valor_Aactk(t, k);
+  document.getElementById("resultado").innerHTML = "O valor dos juros acumulados entre a parcela " + t + " e " + tk + " é R$ " + Jactk.toFixed(2);
 }
