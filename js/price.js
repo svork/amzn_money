@@ -13,6 +13,7 @@ var Pt1;
 var Jt;
 var A1;
 var At;
+var Aac;
 
 // Fórmulas
 function valor_R(){
@@ -60,4 +61,10 @@ function p06(){
   var t = document.getElementById("p06t").value;
   At = A1 * (( 1 + i ) ** ( t - 1 ));
   document.getElementById("resultado").innerHTML = "O valor da parcela de amortização ao final da prestação " + t + " é R$ " + At.toFixed(2);
+}
+
+function p07(){
+  var t = document.getElementById("p07t").value;
+  Aac = valor_R() * (((( 1 + i ) ** n ) - 1 ) / ((( 1 + i ) ** n ) * i ) - ((( 1 + i ) ** ( n - t )) - 1 ) / ((( 1 + i ) ** (n - t )) * i ));
+  document.getElementById("resultado").innerHTML = "O valor das amortizações acumuladas até a parcela " + t + " é R$ " + Aac.toFixed(2);
 }
