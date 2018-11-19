@@ -10,6 +10,7 @@ var n = localStorage.getItem("n");
 var R;
 var Pt;
 var Pt1;
+var Jt;
 
 // Fórmulas
 function valor_R(){
@@ -17,6 +18,12 @@ function valor_R(){
   return R;
 }
 
+function valor_Pt1(t){
+  Pt1 = valor_R() * ((( 1 + i ) ** (( n - t ) + 1 )) - 1 ) / (((( 1 + i ) ** (( n - t ) + 1 ) * i )));
+  return Pt1;
+}
+
+// Funções
 function p01(){
   document.getElementById("resultado").innerHTML = "O valor da prestação é R$ " + valor_R().toFixed(2);
 }
@@ -29,6 +36,11 @@ function p02(){
 
 function p03(){
   var t = document.getElementById("p03t").value;
-  Pt1 = valor_R() * ((( 1 + i ) ** (( n - t ) + 1 )) - 1 ) / (((( 1 + i ) ** (( n - t ) + 1 ) * i )))
-  document.getElementById("resultado").innerHTML = "O valor do saldo devedor ao final da prestação " + ( t - 1 ) + " é R$ " + Pt1.toFixed(2);
+  document.getElementById("resultado").innerHTML = "O valor do saldo devedor ao final da prestação " + ( t - 1 ) + " é R$ " + valor_Pt1(t).toFixed(2);
+}
+
+function p04(){
+  var t = document.getElementById("p04t").value;
+  Jt = i * valor_Pt1(t);
+  document.getElementById("resultado").innerHTML = "O valor da parcela de juros ao final da prestação " + t + " é R$ " + Jt.toFixed(2);
 }
