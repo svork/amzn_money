@@ -11,6 +11,7 @@ var A;
 var Pt;
 var Pt1;
 var Jt;
+var Rt;
 
 // Fórmulas
 function valor_A(){
@@ -47,4 +48,10 @@ function s04(){
   var t = document.getElementById("s04t").value;
   Jt = i * valor_Pt1(n, t);
   document.getElementById("resultado").innerHTML = "O valor de juros na parcela " + t + " é R$ " + Jt.toFixed(2);
+}
+
+function s05(){
+  var t = document.getElementById("s05t").value;
+  Rt = valor_A() * ( 1 + i * ( n - t + 1 ));
+  document.getElementById("resultado").innerHTML = "O valor da prestação " + t + " é R$ " + Rt.toFixed(2);
 }
