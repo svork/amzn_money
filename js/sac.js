@@ -17,6 +17,7 @@ var EJ;
 var EJk;
 var ER;
 var ERk;
+var R;
 
 // Fórmulas
 function valor_A(){
@@ -95,4 +96,9 @@ function s10(){
   var tk = document.getElementById("s10tk").value;
   ERk = valor_A() * k * ( 1 + i * ( n - t - (( k - 1 ) / 2 )));
   document.getElementById("resultado").innerHTML = "A soma das prestações acumuladas entre a prestação " + t + " e " + tk + " é R$ " + ERk.toFixed(2);
+}
+
+function s11(){
+  R = i * valor_A();
+  document.getElementById("resultado").innerHTML = "O decréscimo nas prestações é R$ " + R.toFixed(2);
 }
