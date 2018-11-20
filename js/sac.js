@@ -12,6 +12,7 @@ var Pt;
 var Pt1;
 var Jt;
 var Rt;
+var EA;
 
 // Fórmulas
 function valor_A(){
@@ -54,4 +55,12 @@ function s05(){
   var t = document.getElementById("s05t").value;
   Rt = valor_A() * ( 1 + i * ( n - t + 1 ));
   document.getElementById("resultado").innerHTML = "O valor da prestação " + t + " é R$ " + Rt.toFixed(2);
+}
+
+function s06(){
+  var t = document.getElementById("s06t").value;
+  var k = document.getElementById("s06tk").value - t;
+  var tk = document.getElementById("s06tk").value;
+  EA = k * valor_A();
+  document.getElementById("resultado").innerHTML = "A soma das amortizações entre a prestação " + t + " e " + tk + " é R$ " + EA.toFixed(2);
 }
