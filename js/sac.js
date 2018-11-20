@@ -14,6 +14,7 @@ var Jt;
 var Rt;
 var EA;
 var EJ;
+var EJk;
 
 // Fórmulas
 function valor_A(){
@@ -70,4 +71,12 @@ function s07(){
   var t = document.getElementById("s07t").value;
   EJ = i * valor_A() * t * (( 2 * n - t + 1 ) / 2 );
   document.getElementById("resultado").innerHTML = "A soma dos juros acumulados até a prestação " + t + " é R$ " + EJ.toFixed(2);
+}
+
+function s08(){
+  var t = document.getElementById("s08t").value;
+  var k = document.getElementById("s08tk").value - t;
+  var tk = document.getElementById("s08tk").value;
+  EJk = i * valor_A() * k * ( n - t - (( k - 1 ) / 2 ));
+  document.getElementById("resultado").innerHTML = "A soma dos juros acumulados entre a prestação " + t + " e " + tk + " é R$ " + EJk.toFixed(2);
 }
