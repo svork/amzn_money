@@ -16,6 +16,7 @@ var EA;
 var EJ;
 var EJk;
 var ER;
+var ERk;
 
 // Fórmulas
 function valor_A(){
@@ -86,4 +87,12 @@ function s09(){
   var t = document.getElementById("s09t").value;
   ER = valor_A() * t * ( 1 + i * (( 2 * n - t + 1 ) / 2 ));
   document.getElementById("resultado").innerHTML = "A soma das prestações acumuladas até a prestação " + t + " é R$ " + ER.toFixed(2);
+}
+
+function s10(){
+  var t = document.getElementById("s10t").value;
+  var k = document.getElementById("s10tk").value - t;
+  var tk = document.getElementById("s10tk").value;
+  ERk = valor_A() * k * ( 1 + i * ( n - t - (( k - 1 ) / 2 )));
+  document.getElementById("resultado").innerHTML = "A soma das prestações acumuladas entre a prestação " + t + " e " + tk + " é R$ " + ERk.toFixed(2);
 }
