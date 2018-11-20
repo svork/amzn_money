@@ -10,6 +10,7 @@ var n = localStorage.getItem("n");
 var A;
 var Pt;
 var Pt1;
+var Jt;
 
 // Fórmulas
 function valor_A(){
@@ -40,4 +41,10 @@ function s02(){
 function s03(){
   var t = document.getElementById("s03t").value;
   document.getElementById("resultado").innerHTML = "O saldo devedor na parcela " + ( t - 1 ) + " é R$ " + valor_Pt1(n, t).toFixed(2);
+}
+
+function s04(){
+  var t = document.getElementById("s04t").value;
+  Jt = i * valor_Pt1(n, t);
+  document.getElementById("resultado").innerHTML = "O valor de juros na parcela " + t + " é R$ " + Jt.toFixed(2);
 }
