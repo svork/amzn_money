@@ -1,0 +1,38 @@
+/*
+  Estilos da página sac.html
+*/
+
+body {
+  background-color: lightgrey; 
+}
+
+p {
+  font-family: arial;
+}
+
+h2 {
+  font-family: arial;
+}
+
+label {
+  font-family: arial;
+}
+
+button {
+  background-color: white; 
+  border: 2px solid #008CBA; 
+  color: black; 
+  padding: 16px 32px;
+  text-align: center; 
+  text-decoration: none; 
+  display: inline-block; 
+  font-size: 16px; 
+  margin: 4px 2px; 
+  transition-duration: 0.4s; 
+  cursor: pointer;  
+}
+
+button:hover {
+  background-color: #008CBA; 
+  color: white; 
+}
